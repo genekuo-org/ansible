@@ -2,5 +2,4 @@
 - hosts: "{{ target | default('localhost') }}" 
   become: yes 
   roles: 
-    - java8base 
-    - codedeploy 
+    - java8base
