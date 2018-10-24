@@ -10,6 +10,12 @@
     name: java-1.8.0-openjdk
     state: present
 
+- name: Set Java Home Environmental Variables
+  template:
+    src: java_home.sh.j2
+    dest: "/etc/profile.d/java_home.sh"
+    mode: 0644
+
 - name: Add Jenkins repository
   shell: wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
 
